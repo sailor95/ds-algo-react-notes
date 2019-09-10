@@ -47,3 +47,18 @@ $('#button')
 //     "A+C": "5"
 // }
 // dbChecker(A, C) -> return 5
+
+const memo = func => {
+    let history = {};
+
+    return () => {
+        const key = JSON.stringify(arguments);
+        if (history[key]) {
+            return history[key];
+        } else {
+            const val = func.apply(null, arguments);
+            history[key] = val;
+            return val;
+        }
+    }
+}
