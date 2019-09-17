@@ -30,10 +30,12 @@ console.log(toCurrency_2(99900066));
 
 
 // Q2: Anagram, check two strings can compose each other by all the char. (Ignore white space.)
+// Example: anagram('Hello', 'Oll Eh') === true
 
-const anagram = (s1, s2) => {
+const anagram = (s1, s2) =>
+    s1.toLowerCase().split('').sort().join('').trim() === s2.toLowerCase().split('').sort().join('').trim();
 
-}
+console.log(`Ana: ${anagram('Hel ttlo', 'Otll EhT')}`);
 
 // Q3:
 
