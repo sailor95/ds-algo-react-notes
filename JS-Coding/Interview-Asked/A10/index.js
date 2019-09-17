@@ -1,9 +1,33 @@
 // Q1: To currency
 // Example: "99900000.5566" -> "99,900,000.5566"
 
-const toCurrency = input => {
+const toCurrency_1 = input => {
+    const [intNum = '0', fractionNum = '0000'] = input.toString().split('.');
 
+    let intCurrency = [];
+    intNum.split('').reverse().forEach((val, i) => {
+        if ((i + 1) % 3 !== 0) {
+            intCurrency.push(val);
+        } else {
+            if ((i + 1) !== intNum.length) {
+                intCurrency.push(val);
+                intCurrency.push(',');
+            } else {
+                intCurrency.push(val);
+            }
+        }
+    });
+
+    return intCurrency.reverse().join('') + '.' + fractionNum;
 }
+
+const toCurrency_2 = input => input.toFixed(4).replace(/\d(?=(\d{3})+\.)/g, '$&,');
+
+console.log(toCurrency_1(999000.5566));
+console.log(toCurrency_1(99900066));
+console.log(toCurrency_2(999000.5566));
+console.log(toCurrency_2(99900066));
+
 
 // Q2: Anagram, check two strings can compose each other by all the char. (Ignore white space.)
 
