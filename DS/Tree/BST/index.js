@@ -1,6 +1,16 @@
+// Functions: 
+// insert
+// remove
+// findMin
+// getRootNode
+// in-order(node)
+// pre-order(node)
+// post-order(node)
+// search(node, data)
+
 class Node {
-    constructor(value) {
-        this.value = value;
+    constructor(val) {
+        this.val = val;
         this.left = null;
         this.right = null;
     }
@@ -11,30 +21,63 @@ class BinarySearchTree {
         this.root = null;
     }
 
-    insert(value) {
-        var newNode = new Node(value);
-        if (this.root.value === null) {
-            this.root = newNode;
+    // Basic functions
+    insert(val) {
+        if (this.root === null) {
+            this.root = new Node(val);
             return this;
-        }
-        var current = this.root;
-        while (true) {
-            if (value === current.value) return undefined;
-            if (value < current.value) {
-                if (current.left === null) {
-                    current.left = newNode;
-                    return this;
+        } else {
+            let pointer = this.root;
+            while (true) {
+                if (val === pointer.val) return undefined;
+                if (val > pointer.val) {
+                    if (pointer.right) {
+                        pointer = pointer.right;
+                    } else {
+                        pointer.right = new Node(val);
+                        return this;
+                    }
+                } else {
+                    if (pointer.left) {
+                        pointer = pointer.left;
+                    } else {
+                        pointer.left = new Node(val);
+                        return this;
+                    }
                 }
-                current = current.left;
-            } else if (value > current.value) {
-                if (current.right === null) {
-                    current.right = newNode;
-                    return this;
-                }
-                current = current.right;
             }
         }
     }
+
+    remove(val) {
+
+    }
+
+    findMin(node) {
+
+    }
+
+    getRootNode() {
+
+    }
+
+    inOrder(node) {
+
+    }
+
+    preOrder(node) {
+
+    }
+
+    postOrder(node) {
+
+    }
+
+    search(node, data) {
+
+    }
+
+    // Udemy example
 
     // find(value) {
     //     if (this.root === null) return false;
@@ -51,18 +94,25 @@ class BinarySearchTree {
     //     }
     // }
 
-    find(value, node = this.root) {
-        if (!node) return false;
-        if (node.value === value) return true;
-        if (node.value > value) {
-            return this.find(value, node.left);
-        } else {
-            return this.find(value, node.right);
-        }
-    }
+    // find(value, node = this.root) {
+    //     if (!node) return false;
+    //     if (node.value === value) return true;
+    //     if (node.value > value) {
+    //         return this.find(value, node.left);
+    //     } else {
+    //         return this.find(value, node.right);
+    //     }
+    // }
 
 }
 
-
+let tree = new BinarySearchTree();
+tree.insert(100);
+tree.insert(90);
+tree.insert(109);
+tree.insert(101);
+tree.insert(105);
+tree.insert(10);
+tree.insert(12);
 
 console.log(tree);
