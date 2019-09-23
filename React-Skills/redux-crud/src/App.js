@@ -1,26 +1,58 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import { connect } from 'react-redux';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+import './App.css';
+import ItemList from './components/ItemList';
+import {
+  fetchData,
+  createItem,
+  editItem,
+  clearData,
+  deleteItem
+} from './store/reducers/itemsReducer';
+
+class App extends React.Component {
+  componentDidMount() {
+    this.props.fetchData();
+  }
+
+  render() {
+    const {
+      items,
+      fetchData,
+      clearData,
+      createItem,
+      deleteItem,
+      editItem
+    } = this.props;
+
+    return (
+      <div className="App" >
+        <ItemList
+          list={items.list}
+          fetchData={fetchData}
+          clearData={clearData}
+          createItem={() => createItem(this.props.items.totalItems)}
+          deleteItem={deleteItem}
+          editItem={editItem}
+        />
+      </div>
+    );
+  }
 }
 
-export default App;
+const mapStateToProps = state => {
+  return {
+    items: state.items
+  };
+}
+
+const mapDispatchToProps = {
+  fetchData,
+  createItem,
+  editItem,
+  clearData,
+  deleteItem
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(App);
