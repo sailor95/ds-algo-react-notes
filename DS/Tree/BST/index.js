@@ -82,7 +82,22 @@ class BinarySearchTree {
 
     }
 
-    // Udemy example
+    bfs() {
+        var node,
+            data = [],
+            queue = [];
+        queue.push(this.root);
+        while (queue.length) {
+            node = queue.shift();
+            data.push(node);
+            if (node.left) queue.push(node.left);
+            if (node.right) queue.push(node.right);
+        }
+        return data;
+    }
+
+
+    // Udemy examples
 
     // find(value) {
     //     if (this.root === null) return false;
