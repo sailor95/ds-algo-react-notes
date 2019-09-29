@@ -96,6 +96,38 @@ class BinarySearchTree {
         return data;
     }
 
+    dfsPreOrder() {
+        let ans = [];
+        const traverse = node => {
+            ans.push(node.val);
+            if (node.left) traverse(node.left);
+            if (node.right) traverse(node.right);
+        }
+        traverse(this.root);
+        return ans;
+    }
+
+    dfsPostOrder() {
+        let ans = [];
+        const traverse = node => {
+            if (node.left) traverse(node.left);
+            if (node.right) traverse(node.right);
+            ans.push[node.val];
+        }
+        traverse(this.root);
+        return ans
+    }
+
+    dfsPostOrder() {
+        let ans = [];
+        const traverse = node => {
+            if (node.left) traverse(node.left);
+            ans.push[node.val];
+            if (node.right) traverse(node.right);
+        }
+        traverse(this.root);
+        return ans
+    }
 
     // Udemy examples
 
