@@ -23,10 +23,10 @@ const toCurrency_1 = input => {
 
 const toCurrency_2 = input => input.toFixed(4).replace(/\d(?=(\d{3})+\.)/g, '$&,');
 
-console.log(toCurrency_1(999000.5566));
-console.log(toCurrency_1(99900066));
-console.log(toCurrency_2(999000.5566));
-console.log(toCurrency_2(99900066));
+// console.log(toCurrency_1(999000.5566));
+// console.log(toCurrency_1(99900066));
+// console.log(toCurrency_2(999000.5566));
+// console.log(toCurrency_2(99900066));
 
 
 // Q2: Anagram, check two strings can compose each other by all the char. (Ignore white space.)
@@ -35,7 +35,7 @@ console.log(toCurrency_2(99900066));
 const anagram = (s1, s2) =>
     s1.toLowerCase().split('').sort().join('').trim() === s2.toLowerCase().split('').sort().join('').trim();
 
-console.log(`Ana: ${anagram('Hel ttlo', 'Otll EhT')}`);
+// console.log(`Ana: ${anagram('Hel ttlo', 'Otll EhT')}`);
 
 // Q3:
 
@@ -47,19 +47,19 @@ const getUrl = (url, param) => {
 
 }
 
-console.log(
-    getUrl("/api/v1/user/{id}/profile", {
-        id: 123,
-        nickName: "Lee Chen",
-        description: "Hello world @.@"
-    }) === "/api/v1/user/123/profile?nickName=Lee+Chen&description=HelloWorld!%20%40.%40"
-);
-console.log(
-    getUrl("/api/v1/server/{port}/{protocol}", {
-        port: 80,
-        protocol: "TCP"
-    }) === "/api/v1/server/80/TCP"
-);
+// console.log(
+//     getUrl("/api/v1/user/{id}/profile", {
+//         id: 123,
+//         nickName: "Lee Chen",
+//         description: "Hello world @.@"
+//     }) === "/api/v1/user/123/profile?nickName=Lee+Chen&description=HelloWorld!%20%40.%40"
+// );
+// console.log(
+//     getUrl("/api/v1/server/{port}/{protocol}", {
+//         port: 80,
+//         protocol: "TCP"
+//     }) === "/api/v1/server/80/TCP"
+// );
 
 // Q5:
 
@@ -141,4 +141,24 @@ const add_4 = (...args) => {
 // }
 
 
+function sum3(...args) {
+    function curriedSum(...rest) {
+        args.push(...rest);
+        return curriedSum;
+    }
+    curriedSum.toString = () => args.reduce((prev, curr) => curr + prev);
 
+    curriedSum.toNumber = () => args.reduce((prev, curr) => curr + prev);
+    return curriedSum;
+}
+
+function sum2() {
+    var args = arguments
+    return function () {
+        var arr = []
+        arr.push(...args, ...arguments)
+        return arr.reduce((total, item) => total += item, 0)
+    }
+}
+
+console.log(sum3(1)(2));
