@@ -18,7 +18,8 @@ This is my cheat sheet of React development skills.
 
 ### Store
 
-- [ ] ConfigStore
+- [ ] ConfigStore boilerplate
+- [ ] redux-persistant
 
 ### Middleware
 
