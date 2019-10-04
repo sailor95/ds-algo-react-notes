@@ -2,6 +2,12 @@
 
 This is my cheat sheet of React development skills.
 
+### Main Feature Branches
+
+- React
+- Redux
+- Util
+
 ## React
 
 ### Hooks
