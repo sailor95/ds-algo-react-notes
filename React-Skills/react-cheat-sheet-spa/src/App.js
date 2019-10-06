@@ -1,14 +1,17 @@
 import React from 'react';
-import './App.css';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import { Route } from 'react-router-dom';
 
-import ControlledForm from './ControlledForm';
+import MyNavbar from './components/ui/MyNavbar'
+import Home from './components/main-pages/home/Home';
+import ReactPage from './components/main-pages/react';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <ControlledForm />
-      </header>
+      <MyNavbar />
+      <Route exact path="/" component={Home} />
+      <ReactPage />
     </div>
   );
 }
