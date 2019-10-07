@@ -20,6 +20,10 @@ This is my cheat sheet of React development skills.
 - [ ] useMemo
 - [ ] useRef
 
+### Unit Test
+
+- [ ] enzyme
+
 ## Redux
 
 ### Store
