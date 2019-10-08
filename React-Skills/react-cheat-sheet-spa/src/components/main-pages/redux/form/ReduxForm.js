@@ -16,7 +16,7 @@ class ReduxForm extends React.Component {
             <h3>Base Form</h3>
           </Col>
           <Col sm={6}>
-            <BaseForm disabled={true} />
+            <BaseForm form="base-form" disabled={false} />
           </Col>
           <Col sm={12}>
             <h3>Form Container</h3>
