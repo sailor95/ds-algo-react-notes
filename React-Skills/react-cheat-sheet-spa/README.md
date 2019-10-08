@@ -10,6 +10,10 @@ This is my cheat sheet of React development skills.
 
 ## React
 
+### Basic Form
+
+- [x] Controlled form
+
 ### Hooks
 
 - [ ] useState
@@ -30,6 +34,10 @@ This is my cheat sheet of React development skills.
 
 - [ ] ConfigStore boilerplate
 - [ ] redux-persistant
+
+### Redux Form
+
+- [x] [redux-form](https://redux-form.com/8.2.2/)
 
 ### Middleware
 
@@ -54,7 +62,6 @@ This is my cheat sheet of React development skills.
 ### Form
 
 - [ ] [formik](https://jaredpalmer.com/formik/docs/overview)
-- [ ] [redux-form](https://redux-form.com/8.2.2/)
 
 ### UI Components
 
