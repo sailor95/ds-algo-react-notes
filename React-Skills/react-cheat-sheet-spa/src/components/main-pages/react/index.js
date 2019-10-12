@@ -6,7 +6,7 @@ import ControlledForm from './form/ControlledForm';
 const ReactPage = () => {
     return (
         <>
-            <Route path="/react/form" component={ControlledForm} />
+            <Route path="/react/form-control" component={ControlledForm} />
         </>
     );
 }

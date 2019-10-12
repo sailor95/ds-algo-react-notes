@@ -27,14 +27,14 @@ const MyNavbar = () => (
                      effect when drop items is active */}
                 <LinkContainer to="/react">
                     <NavDropdown title="React">
-                        <LinkContainer exact to="/react/form">
+                        <LinkContainer exact to="/react/form-control">
                             <NavDropdown.Item>Form Control</NavDropdown.Item>
                         </LinkContainer>
                     </NavDropdown>
                 </LinkContainer>
                 <LinkContainer to="/redux">
                     <NavDropdown title="Redux">
-                        <LinkContainer exact to="/redux/form">
+                        <LinkContainer exact to="/redux/redux-form">
                             <NavDropdown.Item>Redux Form</NavDropdown.Item>
                         </LinkContainer>
                     </NavDropdown>
