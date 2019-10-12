@@ -11,46 +11,44 @@ const initState = {
     totalItems: 0
 }
 
-export const fetchData = () => async dispatch => {
-    const response = await axios.get('https://jsonplaceholder.typicode.com/todos');
-    dispatch({
-        type: FETCH_DATA,
-        list: response.data,
-        totalItems: response.data.length
-    });
+export const actionCreators = {
+    fetchData: () => async dispatch => {
+        const response = await axios.get('https://jsonplaceholder.typicode.com/todos');
+        dispatch({
+            type: FETCH_DATA,
+            list: response.data,
+            totalItems: response.data.length
+        });
+    },
+    createItem: totalItems => {
+        return {
+            type: CREATE_DATA,
+            newItem: {
+                userId: totalItems + 1,
+                id: totalItems + 1,
+                title: `My Content ${totalItems + 1}`,
+                completed: false
+            }
+        };
+    },
+    editItem: id => {
+        return {
+            type: EDIT_DATA,
+            editId: id
+        };
+    },
+    deleteItem: id => {
+        return {
+            type: DELETE_DATA,
+            deletedId: id
+        };
+    },
+    clearData: () => {
+        return {
+            type: CLEAR_DATA,
+        };
+    }
 }
-
-export const createItem = totalItems => {
-    return {
-        type: CREATE_DATA,
-        newItem: {
-            userId: totalItems + 1,
-            id: totalItems + 1,
-            title: `My Content ${totalItems + 1}`,
-            completed: false
-        }
-    };
-};
-
-export const editItem = id => {
-    return {
-        type: EDIT_DATA,
-        editId: id
-    };
-};
-
-export const deleteItem = id => {
-    return {
-        type: DELETE_DATA,
-        deletedId: id
-    };
-};
-
-export const clearData = () => {
-    return {
-        type: CLEAR_DATA,
-    };
-};
 
 const itemsReducer = (state = initState, action) => {
     switch (action.type) {

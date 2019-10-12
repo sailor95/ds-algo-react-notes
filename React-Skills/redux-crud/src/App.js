@@ -3,13 +3,7 @@ import { connect } from 'react-redux';
 
 import './App.css';
 import ItemList from './components/ItemList';
-import {
-  fetchData,
-  createItem,
-  editItem,
-  clearData,
-  deleteItem
-} from './store/reducers/itemsReducer';
+import { actionCreators } from './store/reducers/itemsReducer';
 
 class App extends React.Component {
   componentDidMount() {
@@ -48,11 +42,11 @@ const mapStateToProps = state => {
 }
 
 const mapDispatchToProps = {
-  fetchData,
-  createItem,
-  editItem,
-  clearData,
-  deleteItem
+  fetchData: actionCreators.fetchData,
+  createItem: actionCreators.createItem,
+  editItem: actionCreators.editItem,
+  clearData: actionCreators.clearData,
+  deleteItem: actionCreators.deleteItem
 }
 
 export default connect(mapStateToProps, mapDispatchToProps)(App);

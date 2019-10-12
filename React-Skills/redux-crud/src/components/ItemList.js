@@ -55,7 +55,7 @@ const ItemList = props => {
 
     return (
         <div>
-            <h1>React CRUD</h1>
+            <h1>Redux CRUD</h1>
             <button onClick={fetchData} style={styles.topBtn}>Fetch From API</button>
             <button onClick={createItem} style={styles.topBtn}>Create Item</button>
             <button onClick={clearData} style={styles.topBtn}>Clear All</button>
