@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 const PostList = ({ posts }) => {
     console.log(posts);
@@ -12,6 +13,19 @@ const PostList = ({ posts }) => {
             </ul>
         </div>
     );
+};
+
+PostList.propTypes = {
+    posts: PropTypes.array.isRequired
+};
+
+PostList.defaultProps = {
+    posts: [
+        {
+            id: 0,
+            title: 'Falied to fetch'
+        }
+    ]
 };
 
 export default PostList;
