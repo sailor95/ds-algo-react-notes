@@ -34,6 +34,9 @@ const MyNavbar = () => (
                 </LinkContainer>
                 <LinkContainer to="/redux">
                     <NavDropdown title="Redux">
+                        <LinkContainer exact to="/redux/boilerplate">
+                            <NavDropdown.Item>Redux Boilerplate</NavDropdown.Item>
+                        </LinkContainer>
                         <LinkContainer exact to="/redux/redux-form">
                             <NavDropdown.Item>Redux Form</NavDropdown.Item>
                         </LinkContainer>
