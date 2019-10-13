@@ -8,7 +8,7 @@ import thunk from 'redux-thunk';
 
 import items from './reducers/itemsReducer';
 
-const configStore = () => {
+const configStore = (initState = {}) => {
     const reducers = {
         items
     };
@@ -28,7 +28,7 @@ const configStore = () => {
 
     return createStore(
         rootReducer,
-        // initState,
+        initState,
         compose(applyMiddleware(...middleWares), ...enhancers)
     );
 };
