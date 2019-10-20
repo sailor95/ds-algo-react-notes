@@ -23,7 +23,7 @@ PostList.defaultProps = {
     posts: [
         {
             id: 0,
-            title: 'Falied to fetch'
+            title: 'Failed to fetch'
         }
     ]
 };
