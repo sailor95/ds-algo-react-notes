@@ -30,6 +30,9 @@ const MyNavbar = () => (
                         <LinkContainer exact to="/react/form-control">
                             <NavDropdown.Item>Form Control</NavDropdown.Item>
                         </LinkContainer>
+                        <LinkContainer exact to="/react/context">
+                            <NavDropdown.Item>Context</NavDropdown.Item>
+                        </LinkContainer>
                     </NavDropdown>
                 </LinkContainer>
                 <LinkContainer to="/redux">
