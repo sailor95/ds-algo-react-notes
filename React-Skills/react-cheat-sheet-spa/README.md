@@ -14,6 +14,10 @@ This is my cheat sheet of React development skills.
 
 - [x] Controlled form
 
+### Context
+
+- [ ] React Context
+
 ### Hooks
 
 - [ ] useState
