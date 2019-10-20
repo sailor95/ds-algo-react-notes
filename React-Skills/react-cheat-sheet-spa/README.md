@@ -16,7 +16,7 @@ This is my cheat sheet of React development skills.
 
 ### Context
 
-- [ ] React Context
+- [x] React Context
 
 ### Hooks
 
