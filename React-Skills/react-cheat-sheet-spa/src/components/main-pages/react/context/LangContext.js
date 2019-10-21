@@ -1,3 +1,6 @@
 import React from 'react';
 
-export default React.createContext();
+const ctx = React.createContext();
+
+export const { Provider, Consumer } = ctx;
+export default ctx;
