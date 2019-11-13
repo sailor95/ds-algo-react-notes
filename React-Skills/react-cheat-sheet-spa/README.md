@@ -37,7 +37,7 @@ This is my cheat sheet of React development skills.
 ### Store
 
 - [ ] ConfigStore boilerplate
-- [ ] redux-persistant
+- [ ] redux-persist
 
 ### Redux Form
 
