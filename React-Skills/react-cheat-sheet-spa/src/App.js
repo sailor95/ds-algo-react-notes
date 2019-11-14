@@ -6,6 +6,7 @@ import { Provider } from 'react-redux';
 
 import configStore from './store/configStore';
 import MyNavbar from './components/ui/MyNavbar'
+import MyFoorter from './components/ui/MyFooter';
 
 // Main pages
 import Home from './components/main-pages/home/Home';
@@ -24,6 +25,7 @@ function App() {
           <Route exact path="/" component={Home} />
           <ReactPage />
           <ReduxPage />
+          <MyFoorter />
         </Router>
       </Provider>
     </div>

@@ -33,6 +33,9 @@ const MyNavbar = () => (
                         <LinkContainer exact to="/react/context">
                             <NavDropdown.Item>Context</NavDropdown.Item>
                         </LinkContainer>
+                        <LinkContainer exact to="/react/util-hooks">
+                            <NavDropdown.Item>Util Hooks</NavDropdown.Item>
+                        </LinkContainer>
                     </NavDropdown>
                 </LinkContainer>
                 <LinkContainer to="/redux">
