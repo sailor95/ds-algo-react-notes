@@ -10,6 +10,8 @@ This is my cheat sheet of React development skills.
 
 ## React
 
+- [x] React.PureComponent
+
 ### Basic Form
 
 - [x] Controlled form
@@ -20,12 +22,12 @@ This is my cheat sheet of React development skills.
 
 ### Hooks
 
-- [x] useState
+- [ ] useState
 - [ ] useEffect
 - [ ] useContext
 - [ ] useReducer
-- [x] useCallback
-- [x] useMemo
+- [ ] useCallback
+- [ ] useMemo
 - [ ] useRef
 
 ### Unit Test
