@@ -20,12 +20,12 @@ This is my cheat sheet of React development skills.
 
 ### Hooks
 
-- [ ] useState
+- [x] useState
 - [ ] useEffect
 - [ ] useContext
 - [ ] useReducer
-- [ ] useCallback
-- [ ] useMemo
+- [x] useCallback
+- [x] useMemo
 - [ ] useRef
 
 ### Unit Test
