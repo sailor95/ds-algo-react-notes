@@ -1,3 +1,5 @@
+import { batch } from 'react-redux';
+
 import jsonPlaceholderApi from '../../services/jsonPlaceholderApi';
 
 export const actionTypes = {
@@ -11,17 +13,14 @@ export const actionTypes = {
 
 const actionCreators = {
     fetchPosts: () => async dispatch => {
-        dispatch({
-            type: actionTypes.GET_POSTS_REQUEST,
-        });
-
         try {
             const response = await jsonPlaceholderApi.getPosts();
-            dispatch({
-                type: actionTypes.GET_POSTS_SUCCESS,
-                payload: {
-                    posts: response
-                }
+            batch(() => {
+                dispatch({ type: actionTypes.GET_POSTS_REQUEST });
+                dispatch({
+                    type: actionTypes.GET_POSTS_SUCCESS,
+                    payload: { posts: response }
+                });
             });
         } catch (e) {
             dispatch({

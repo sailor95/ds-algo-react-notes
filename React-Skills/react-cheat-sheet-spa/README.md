@@ -36,9 +36,13 @@ This is my cheat sheet of React development skills.
 
 ## Redux
 
+### react-redux
+
+- [x] [batch](https://react-redux.js.org/api/batch) (See Redux Boilerplate section.)
+
 ### Store
 
-- [ ] ConfigStore boilerplate
+- [x] ConfigStore boilerplate
 - [ ] redux-persist
 
 ### Redux Form
@@ -53,7 +57,7 @@ This is my cheat sheet of React development skills.
 
 ### Enhancers
 
-- [ ] Redux dev tool
+- [x] Redux dev tool
 
 ## Useful NPM Packages
 
