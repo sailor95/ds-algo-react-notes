@@ -52,7 +52,7 @@ This is my cheat sheet of React development skills.
 ### Middleware
 
 - [ ] How to create middleware
-- [ ] Thunk
+- [x] Thunk
 - [ ] Saga
 
 ### Enhancers
@@ -64,10 +64,11 @@ This is my cheat sheet of React development skills.
 ### Utility
 
 - [ ] [lodash](https://lodash.com/)
+- [x] [redux-immutable-state-invariant](https://github.com/leoasis/redux-immutable-state-invariant)
 
 ### HTTP
 
-- [ ] [axios](https://github.com/axios/axios)
+- [x] [axios](https://github.com/axios/axios)
 
 ### Form
 
