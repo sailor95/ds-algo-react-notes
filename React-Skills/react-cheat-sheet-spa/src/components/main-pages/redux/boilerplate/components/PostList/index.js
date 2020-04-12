@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 const PostList = ({ posts }) => {
-    console.log(posts);
+    console.log("posts");
     return (
         <div>
             <h3>Post List</h3>

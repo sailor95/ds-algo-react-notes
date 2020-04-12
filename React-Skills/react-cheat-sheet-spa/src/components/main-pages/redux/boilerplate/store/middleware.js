@@ -1,6 +1,5 @@
 import { applyMiddleware, compose } from 'redux';
 import thunk from 'redux-thunk';
-import { createLogger } from 'redux-logger';
 
 const isProd = process.env.NODE_ENV === 'production';
 const middlewareList = [
@@ -9,7 +8,12 @@ const middlewareList = [
 const enhancerList = [];
 
 if (!isProd) {
-    middlewareList.push(createLogger());
+    // Dynamic import development dependencies
+    import('redux-logger').then(({ createLogger }) =>
+        middlewareList.push(createLogger()));
+    import('redux-immutable-state-invariant').then(reduxImmutable =>
+        middlewareList.push(reduxImmutable.default()));
+
     if (
         typeof window !== 'undefined' &&
         window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__

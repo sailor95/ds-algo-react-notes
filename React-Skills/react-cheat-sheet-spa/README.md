@@ -10,6 +10,8 @@ This is my cheat sheet of React development skills.
 
 ## React
 
+- [x] React.PureComponent
+
 ### Basic Form
 
 - [x] Controlled form
@@ -34,10 +36,14 @@ This is my cheat sheet of React development skills.
 
 ## Redux
 
+### react-redux
+
+- [x] [batch](https://react-redux.js.org/api/batch) (See Redux Boilerplate section.)
+
 ### Store
 
-- [ ] ConfigStore boilerplate
-- [ ] redux-persistant
+- [x] ConfigStore boilerplate
+- [ ] redux-persist
 
 ### Redux Form
 
@@ -46,22 +52,23 @@ This is my cheat sheet of React development skills.
 ### Middleware
 
 - [ ] How to create middleware
-- [ ] Thunk
+- [x] Thunk
 - [ ] Saga
 
 ### Enhancers
 
-- [ ] Redux dev tool
+- [x] Redux dev tool
 
 ## Useful NPM Packages
 
 ### Utility
 
 - [ ] [lodash](https://lodash.com/)
+- [x] [redux-immutable-state-invariant](https://github.com/leoasis/redux-immutable-state-invariant)
 
 ### HTTP
 
-- [ ] [axios](https://github.com/axios/axios)
+- [x] [axios](https://github.com/axios/axios)
 
 ### Form
 
